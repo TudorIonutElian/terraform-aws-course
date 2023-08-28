@@ -18,8 +18,8 @@ provider "aws"{
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 
-  tags =                  {
+  tags = {
     "Name" = "Name Tag"
-        "Version"        = "Version Tag"
+    "Version" = "Version Tag"
   }
 }
