@@ -17,4 +17,10 @@ provider "aws"{
 # Create our first resources AWS VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
+  description = "My first VPC resource through Terraform"
+
+  tags {
+    Name = "VPC Name"
+    Version = "VPC Version"
+  }
 }
