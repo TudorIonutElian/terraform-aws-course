@@ -41,7 +41,7 @@ resource "aws_s3_bucket" "myfirsts3bucket" {
 }
 
 # Upload a file to S3 bucket after creation
-resource "aws_s3_bucket_object" "object" {
+resource "aws_s3_object" "myfile" {
   bucket = "terraform-aws-course-example-bucket-en"
   key    = "myfile"
   source = "./myfile.txt"
