@@ -23,3 +23,10 @@ resource "aws_vpc" "main" {
     "Version" = "Version Tag"
   }
 }
+
+# Create and lauch first ec2 instance
+
+resource "aws_instance" "myfirstserverec2instance" {
+  ami = "ami-0766f68f0b06ab145"
+  instance_type = "t2.micro"
+}
