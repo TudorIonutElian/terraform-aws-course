@@ -26,10 +26,12 @@ resource "aws_vpc" "main" {
 
 # Create and lauch first ec2 instance
 resource "aws_instance" "myfirstserverec2instance" {
-  ami = "ami-0766f68f0b06ab145"
+  ami = "ami-057b6e529186a8233"
+  #ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
 }
 
+/*
 # Create a new S3 Bucket
 resource "aws_s3_bucket" "myfirsts3bucket" {
   bucket = "terraform-aws-course-example-bucket-en"
@@ -40,6 +42,10 @@ resource "aws_s3_bucket" "myfirsts3bucket" {
   }
 }
 
+*/
+
+
+/*
 # Upload a file to S3 bucket after creation
 resource "aws_s3_object" "myfile" {
   bucket = "terraform-aws-course-example-bucket-en"
@@ -51,3 +57,4 @@ resource "aws_s3_object" "myfile" {
   # etag = "${md5(file("path/to/file"))}"
   etag = file("myfile.txt")
 }
+*/
