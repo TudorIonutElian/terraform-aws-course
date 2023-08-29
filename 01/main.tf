@@ -9,8 +9,8 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws"{
-  shared_config_files      = ["/home/root/.aws/conf"]
-  shared_credentials_files = ["/home/root/.aws/creds"]
+  shared_config_files      = ["home/root/.aws/config"]
+  shared_credentials_files = ["/home/root/.aws/credentials"]
   profile                  = "default"
 }
 
