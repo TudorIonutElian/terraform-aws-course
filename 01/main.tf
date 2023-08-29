@@ -9,9 +9,9 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws"{
-  region = "eu-central-1"
-  access_key = "AKIA5PWZ742ZBO7ZBPTD"
-  secret_key = "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"
+  shared_config_files      = ["/Users/tf_user/.aws/conf"]
+  shared_credentials_files = ["/Users/tf_user/.aws/creds"]
+  profile                  = "customprofile"
 }
 
 # Create our first resources AWS VPC
