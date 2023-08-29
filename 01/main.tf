@@ -26,8 +26,8 @@ resource "aws_vpc" "main" {
 
 # Create and lauch first ec2 instance
 resource "aws_instance" "myfirstserverec2instance" {
-  ami = "ami-057b6e529186a8233"
-  #ami = "ami-0766f68f0b06ab145"
+  #ami = "ami-057b6e529186a8233" --wrong ami id from another region
+  ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
 }
 
