@@ -24,6 +24,7 @@ resource "aws_vpc" "main" {
   }
 }
 
+# Create datab source for AMI filter
 data "aws_ami" "latest_linux_2"{
   owners = ["amazon"]
   most_recent = true
