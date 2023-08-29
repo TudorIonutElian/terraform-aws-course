@@ -25,8 +25,17 @@ resource "aws_vpc" "main" {
 }
 
 # Create and lauch first ec2 instance
-
 resource "aws_instance" "myfirstserverec2instance" {
   ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
+}
+
+# Create a new S3 Bucket
+resource "aws_s3_bucket" "myfirsts3bucket" {
+  bucket = "terraform-aws-course-example-bucket-en"
+
+  tags = {
+    Name        = "My first bucket"
+    Environment = "Development Course Tag"
+  }
 }
