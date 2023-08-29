@@ -9,9 +9,9 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws"{
-  shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  shared_credentials_files = ["/Users/tf_user/.aws/creds"]
-  profile                  = "customprofile"
+  shared_config_files      = ["/home/root/.aws/conf"]
+  shared_credentials_files = ["/home/root/.aws/creds"]
+  profile                  = "default"
 }
 
 # Create our first resources AWS VPC
