@@ -40,17 +40,11 @@ data "aws_ami" "latest_linux_2"{
   }
 }
 
-resource "aws_key_pair" "my_public_key" {
-  key_name   = "my_public_key"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
-
 # Create and lauch first ec2 instance
 resource "aws_instance" "myfirstserverec2instance" {
   #ami = "ami-057b6e529186a8233" --wrong ami id from another region
   ami = data.aws_ami.latest_linux_2.id
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.my_public_key.key_name
 }
 
 /*
