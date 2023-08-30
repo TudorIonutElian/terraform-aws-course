@@ -45,6 +45,7 @@ resource "aws_instance" "myfirstserverec2instance" {
   #ami = "ami-057b6e529186a8233" --wrong ami id from another region
   ami = data.aws_ami.latest_linux_2.id
   instance_type = "t2.micro"
+  count = 2
 }
 
 /*
